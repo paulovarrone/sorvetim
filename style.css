@@ -69,10 +69,39 @@
    }
 }
 
-
-
 @media (min-width: 1024px) {
+    main footer {
+        display: block;
+    }
+}
+
+ 
+@media (min-width: 1024px){
+    main .cards {
+        grid-template-areas:
+          'A B C'
+          'D B E'
+          'D F E';
+      }
     
+      .cards .card:nth-child(1) {
+        grid-area: A;
+      }
+      .cards .card:nth-child(2) {
+        grid-area: B;
+      }
+      .cards .card:nth-child(3) {
+        grid-area: C;
+      }
+      .cards .card:nth-child(4) {
+        grid-area: D;
+      }
+      .cards .card:nth-child(5) {
+        grid-area: F;
+      }
+      .cards .card:nth-child(6) {
+        grid-area: E;
+      }
 }
 
 
