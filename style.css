@@ -8,6 +8,8 @@
 
     --ff-text: 'Palanquin', sans-serif;
     --ff-grandes: 'Staatliches', cursive;
+    --ff-footer: 'Open Sans', sans-serif;
+    --ff-desk: 'Roboto', sans-serif;
 
     --bg-logo: #8E9AAF;
     --bg-title: #CBC0D3;
@@ -17,8 +19,61 @@
     --col-title: #FFFFFF;
     --col-text: #23053A;
     --col-span: #4A4E69;
+    ;
 }
 
+@media (min-width: 1024px) {
+    .page {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+@media (min-width: 1024px) {
+    main .mob {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    header {
+        width: 377px;
+    }
+
+    header .desk {
+        color: var(--col-title);
+        font-family: var(--ff-desk);
+        text-align: center;
+        display: block;
+        width: 275px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cards .card span {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+   main .cards .un {
+    display: block;
+   }
+   main .cards .dos {
+    display: block;
+   }
+}
+
+
+
+@media (min-width: 1024px) {
+    
+}
 
 
 body {
@@ -43,7 +98,8 @@ header h1, span {
 
 header {
    background: var(--bg-logo);
-   display: grid;
+   display: flex;
+   flex-direction: column;
    place-items: center;
    
    
@@ -69,6 +125,10 @@ header img {
     letter-spacing: 5px;
     font-weight: 400;
     
+}
+
+.desk {
+    display: none;
 }
 
 .mob {
@@ -118,6 +178,30 @@ header img {
     animation-duration: 1s;
 }
 
+.cards .un {
+    text-align: center;
+    position: relative;
+    animation-name: downtop;
+    animation-duration: 1s;
+    display: none;
+}
+
+.cards .dos {
+    text-align: center;
+    position: relative;
+    animation-name: downtop;
+    animation-duration: 1s;
+    display: none;
+}
+
+.cards .dos span {
+    display: none;
+}
+
+.cards .un span {
+    display: none;
+}
+
 .cards img:hover {
     
     transform: scale(1.05);
@@ -125,6 +209,26 @@ header img {
     transition-duration: 600ms;
     
 
+}
+
+footer {
+    font-family: var(--ff-footer);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+   
+
+    text-align: center;
+    display: none;
+}
+
+footer a {
+    color: var(--col-span);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+   
 }
 
 @keyframes topdown {
