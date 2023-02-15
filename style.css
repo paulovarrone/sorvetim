@@ -26,12 +26,19 @@
     .page {
         display: flex;
         flex-direction: row;
+        
     }
 
 }
+
+
 @media (min-width: 1024px) {
     main .mob {
         display: none;
+    }
+
+    main {
+        margin-left: 100px;
     }
 
 }
@@ -39,6 +46,7 @@
 @media (min-width: 1024px) {
     header {
         width: 377px;
+        margin-bottom: 0;
     }
 
     header .desk {
@@ -61,12 +69,10 @@
 }
 
 @media (min-width: 1024px) {
-   main .cards .un {
+   main .card.un {
     display: block;
    }
-   main .cards .dos {
-    display: block;
-   }
+   
 }
 
 @media (min-width: 1024px) {
@@ -82,10 +88,13 @@
           'A B C'
           'D B E'
           'D F E';
+
       }
+
+      
     
       .cards .card:nth-child(1) {
-        grid-area: A;
+        grid-area: F;
       }
       .cards .card:nth-child(2) {
         grid-area: B;
@@ -97,12 +106,13 @@
         grid-area: D;
       }
       .cards .card:nth-child(5) {
-        grid-area: F;
+        grid-area: A;
       }
       .cards .card:nth-child(6) {
         grid-area: E;
       }
 }
+
 
 
 body {
@@ -207,27 +217,7 @@ header img {
     animation-duration: 1s;
 }
 
-.cards .un {
-    text-align: center;
-    position: relative;
-    animation-name: downtop;
-    animation-duration: 1s;
-    display: none;
-}
-
-.cards .dos {
-    text-align: center;
-    position: relative;
-    animation-name: downtop;
-    animation-duration: 1s;
-    display: none;
-}
-
-.cards .dos span {
-    display: none;
-}
-
-.cards .un span {
+.card.un {
     display: none;
 }
 
@@ -246,7 +236,7 @@ footer {
     font-weight: 400;
     font-size: 14px;
     line-height: 28px;
-   
+    margin-top: 50px;
 
     text-align: center;
     display: none;
