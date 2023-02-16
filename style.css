@@ -88,6 +88,7 @@ header {
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
+        height: 100vh; /* deixando ele correr até o final*/
     }
 }
 
@@ -137,7 +138,16 @@ header img {
     margin-top: 62px;
 }
 
-@media (min-width: 1024px){
+
+
+
+.cards img {
+        width: 100%;
+        height: auto;
+    }
+
+
+@media (min-width: 700px){
     main .cards {
         grid-template-areas:
           'A B C'
@@ -166,6 +176,8 @@ header img {
       .cards .card:nth-child(6) {
         grid-area: E;
       }
+
+      
 }
 
 
@@ -206,6 +218,11 @@ header img {
     display: none;
 }
 
+@media (min-width: 700px) {
+    .cards .card.un {
+        display: block;
+      } 
+}
 
 
 @media (min-width: 1024px) {
@@ -234,6 +251,12 @@ footer {
 
     text-align: center;
     display: none;
+}
+
+@media (min-width: 700px) {
+    main footer {
+        display: block;
+      } 
 }
 
 @media (min-width: 1024px) {
