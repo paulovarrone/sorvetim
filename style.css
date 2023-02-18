@@ -256,15 +256,36 @@ footer {
 }
 
 @media (min-width: 700px) {
-    main footer {
+     footer {
         display: block;
       } 
+      footer .fut {
+        margin-left: 10px;
+      }
+
+     
 }
 
 @media (min-width: 1024px) {
-    main footer {
+     footer {
         display: block;
+        bottom: 0;
+        position: fixed;
+        height: 50px;
+        
+        width: 100%;
+       
     }
+    footer .fut {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        margin-left: 400px;
+    }
+
+    
 }
 
 
